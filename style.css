@@ -63,6 +63,12 @@ h3 {
   font-weight: 400;
 }
 
+p {
+  color: #303030;
+  font-size: 22px;
+}
+
+
 .hero-section {
   display: flex;
   gap: 24px;
@@ -79,11 +85,6 @@ h3 {
   padding: 14px;
   border-radius: 100px;
   transform: translateY(-110%);
-}
-
-p {
-  color: #303030;
-  font-size: 22px;
 }
 
 .hero-buttons {
@@ -109,15 +110,44 @@ p {
   border-radius: 2px;
 }
 
+.hero-buttons a:nth-child(1) {
+  color: #f1f1f1;
+  background-color: #0064da;
+  padding: 12px 18px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons a:nth-child(1):hover {
+  background-color: #004a9e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button-video {
+  color: #f1f1f1;
+  background-color: #0064da;
+  padding: 14px;
+  border-radius: 100px;
+  transform: translateY(-110%);
+  transition: all 0.3s ease;
+}
+
+.button-video:hover {
+  background-color: #004a9e;
+  transform: translateY(-112%) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 video {
   border-radius: 4px;
   width: 100%;
   max-width: 600px;
   height: auto;
   margin-top: 18px;
-  display: block; 
+  display: block;
 }
-
 
 .how-it-works-section {
   display: flex;
@@ -192,6 +222,21 @@ video {
   border-radius: 4px;
   border: 1px solid rgb(223, 223, 223);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-article:hover {
+  background: #0064da;
+  color: #fff;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid #0064da;
+}
+
+.card-article:hover h3,
+.card-article:hover p {
+  color: #fff;
 }
 
 article p {
@@ -204,6 +249,10 @@ article p {
   width: 64px;
   height: 64px;
   border-radius: 32px;
+}
+
+.card-article:hover .circle-icon {
+  background-color: #fff;
 }
 
 article h3 {
@@ -251,8 +300,8 @@ article h3 {
 .testimonials-list img {
   height: 160px;
   width: 300px;
-  object-fit: cover; /* Faz o crop sem distorcer */
-  object-position: center; /* Centraliza o corte */
+  object-fit: cover;
+  object-position: center;
 }
 
 .testimonials-card {
@@ -338,10 +387,40 @@ footer ul {
   gap: 10px;
 }
 
+footer ul li a {
+  transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
 .horizontal-line {
   width: 100vw;
   margin: 40px;
   height: 1px;
   background-color: rgb(223, 223, 223);
   border-radius: 0.5px;
+}
+
+@media (max-width: 769px) {
+  .menu-nav {
+    display: none;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
 }
